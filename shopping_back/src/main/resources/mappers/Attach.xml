@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.hs.dgsw.shopping_back.Domain.AttachMapper">
+
+    <select id="findById" parameterType="Long" resultType="HashMap">
+        select a.id, a.user_id as userId, u.username, u.account, a.filename, a.filepath, a.created, a.updated
+        from attach a left join user u on a.user_id = u.id
+        where a.id=#{id}
+    </select>
+
+    <insert id="add" parameterType="kr.hs.dgsw.shopping_back.Domain.Attach">
+        insert into attach(user_id, filename, filepath)
+        values(#{userId}, #{filename}, #{filepath})
+        <selectKey keyProperty="id" resultType="Long">
+            select last_insert_id()
+        </selectKey>
+    </insert>
+
+    <update id="modify" parameterType="kr.hs.dgsw.shopping_back.Domain.Attach">
+        update attach
+        set filename=#{filename}, filepath=#{filepath}
+        where id=#{id}
+    </update>
+
+    <delete id="deleteById" parameterType="Long">
+        delete from attach where id=#{id}
+    </delete>
+
+</mapper>

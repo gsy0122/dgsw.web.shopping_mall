@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.hs.dgsw.shopping_back.Domain.UserMapper">
+    <insert id="add" parameterType="kr.hs.dgsw.shopping_back.Domain.User">
+        insert into user(account, password, username, tel, phone, zip_code1, zip_code2, address, email)
+        values(#{account}, #{password}, #{username}, #{tel}, #{phone}, #{zipCode1}, #{zipCode2}, #{address}, #{email})
+        <selectKey keyProperty="id" resultType="Long">
+            select last_insert_id()
+        </selectKey>
+    </insert>
+
+    <update id="modify" parameterType="kr.hs.dgsw.shopping_back.Domain.User">
+        update user
+        set account=#{account}, password=#{password}, username=#{username}, tel=#{tel},
+          phone=#{phone}, zip_code1=#{zipCode1}, zip_code2=#{zipCode2} address=#{address}, email=#{email}
+        where id=#{id}
+    </update>
+
+    <delete id="deleteById" parameterType="Long">
+        delete from user where id=#{id}
+    </delete>
+
+    <select id="findById" parameterType="Long" resultType="kr.hs.dgsw.shopping_back.Domain.User">
+        select id, account, username, tel, phone, zip_code1 as zipCode1, zip_code2 as zipCode2, address, email, created, updated
+        from user
+        where id=#{id}
+    </select>
+
+    <select id="findByAccount" parameterType="String" resultType="kr.hs.dgsw.shopping_back.Domain.User">
+        select id, account, username, tel, phone, zip_code1 as zipCode1, zip_code2 as zipCode2, address, email, created, updated
+        from user
+        where account=#{account}
+    </select>
+
+    <select id="findAll" resultType="kr.hs.dgsw.shopping_back.Domain.User">
+        select id, account, username, tel, phone, zip_code1 as zipCode1, zip_code2 as zipCode2, address, email, created, updated
+        from user
+    </select>
+
+    <select id="login" parameterType="kr.hs.dgsw.shopping_back.Domain.User"
+            resultType="kr.hs.dgsw.shopping_back.Domain.User">
+        select id, account, username, tel, phone, zip_code1 as zipCode1, zip_code2 as zipCode2, address, email, created, updated
+        from user
+        where account=#{account} and password=#{password}
+    </select>
+</mapper>

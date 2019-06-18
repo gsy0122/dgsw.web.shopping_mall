@@ -1,0 +1,34 @@
+.profile {
+  margin: 30px;
+  width: calc(100vw - 62px);
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+}
+
+.profile-register {
+  > div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &:nth-child(2) {
+      border-top: 1px solid #aaaaaa;
+      border-bottom: 1px solid #aaaaaa;
+    }
+  }
+}
+
+.profile-register-terms {
+  width: calc(100vw - 62px);
+  height: 100px;
+  background-color: #aaaaaa;
+}
+
+.profile-login {
+  > div {
+    position: relative;
+    text-align: center;
+    &:first-child {
+      top: 50%;
+    }
+  }
+}

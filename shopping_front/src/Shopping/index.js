@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
+import './Shopping.scss';
+import MenuBar from "../Menu/MenuBar";
+import ShoppingView from "./ShoppingView";
 
 class Shopping extends Component {
     render() {
         return (
             <div>
-                메인 화면
+                <MenuBar/>
+                <ShoppingView/>
             </div>
         );
     }

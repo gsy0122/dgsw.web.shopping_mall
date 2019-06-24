@@ -1,0 +1,26 @@
+.category-bar {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  > ul {
+    list-style-type: none;
+    li {
+      float: left;
+      a {
+        color: #111;
+        text-decoration: none;
+        padding: 24px;
+        display: block;
+        border-bottom: 4px solid transparent;
+        &:hover {
+          color: #61dafb;
+          border-bottom: 4px solid #61dafb;
+        }
+      }
+    }
+  }
+}
+
+.menu-view {
+  line-height: 100vh;
+}

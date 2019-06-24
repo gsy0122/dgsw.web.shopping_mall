@@ -1,0 +1,25 @@
+.main-visual {
+  text-align: center;
+  height: 20vh;
+  line-height: 20vh;
+  background-color: aqua;
+  > div {
+    font-size: larger;
+  }
+}
+
+.main-event {
+  height: 10vh;
+  line-height: 10vh;
+}
+
+.event-product {
+  margin: 0 35vw;
+  border: 1px solid black;
+  height: 15vh;
+  line-height: 5vh;
+  width: 30vw;
+  > div {
+    font-size: medium;
+  }
+}

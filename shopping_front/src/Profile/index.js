@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {inject, observer} from "mobx-react";
 import Login from "./Login";
 import Register from "./Register";
 

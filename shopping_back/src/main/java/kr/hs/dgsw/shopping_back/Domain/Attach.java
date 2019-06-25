@@ -10,15 +10,11 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Attach {
     private Long id;
-    private Long userId;
     private String filename;
     private String filepath;
-    private LocalDateTime created;
-    private LocalDateTime updated;
 
     @Builder
-    public Attach(Long userId, String filename, String filepath) {
-        this.userId = userId;
+    public Attach(String filename, String filepath) {
         this.filename = filename;
         this.filepath = filepath;
     }

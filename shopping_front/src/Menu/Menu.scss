@@ -22,5 +22,10 @@
 }
 
 .menu-view {
-  line-height: 100vh;
+  width: 33vw;
+  display: flex;
+  text-align: center;
+  > div {
+    margin: 75px;
+  }
 }

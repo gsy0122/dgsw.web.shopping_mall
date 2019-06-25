@@ -15,6 +15,9 @@ public class ProductController {
     @Autowired
     ProductService productService;
 
+    @GetMapping("/api/product")
+    public List<Product> findAll() { return productService.findAll(); }
+
     @GetMapping("/api/product/id")
     public Product findById(@Param("id") Long id) {
         return productService.findById(id);

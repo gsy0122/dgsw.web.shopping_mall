@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.hs.dgsw.shopping_back.Domain.CartMapper">
+    <insert id="add" parameterType="kr.hs.dgsw.shopping_back.Domain.Cart">
+        insert into cart(user_id, product_id, price, amount, total)
+        values(#{userId}, #{productId}, #{price}, #{amount}, #{total})
+        <selectKey keyProperty="id" resultType="Long">
+            select last_insert_id()
+        </selectKey>
+    </insert>
+
+    <update id="modify" parameterType="kr.hs.dgsw.shopping_back.Domain.Cart">
+        update cart
+        set user_id=#{userId}, product_id=#{productId}, price=#{price}, amount=#{amount}, total=#{total}
+        where id=#{id}
+    </update>
+
+    <delete id="deleteById" parameterType="Long">
+        delete from cart where id=#{id}
+    </delete>
+
+    <select id="findById" parameterType="Long" resultType="kr.hs.dgsw.shopping_back.Domain.Cart">
+        select id, user_id as userId, product_id as productId, price, amount, total
+        from cart
+        where id=#{id}
+    </select>
+
+    <select id="findByUserId" parameterType="Long" resultType="kr.hs.dgsw.shopping_back.Domain.Cart">
+        select id, user_id as userId, product_id as productId, price, amount, total
+        from cart
+        where user_id=#{userId}
+    </select>
+</mapper>

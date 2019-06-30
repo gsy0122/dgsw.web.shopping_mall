@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import './Shopping.scss';
-import MenuBar from "../Menu/MenuBar";
 import ShoppingView from "./ShoppingView";
+import MenuTopBar from "../Menu/MenuTopBar";
 
 class Shopping extends Component {
     render() {
         return (
             <div>
-                <MenuBar/>
+                <MenuTopBar/>
                 <ShoppingView/>
             </div>
         );

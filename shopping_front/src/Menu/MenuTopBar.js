@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 @inject('stores')
 @observer
-class MenuBar extends Component {
+class MenuTopBar extends Component {
     componentDidMount() {
         this.props.stores.MenuStore.getMenus();
     }
@@ -14,7 +14,7 @@ class MenuBar extends Component {
             return <li key={menu.id}><Link to={`/menu/${menu.id}`}>{menu.name}</Link></li>
         });
         return (
-            <div className='category-bar'>
+            <div className='menu-top-bar'>
                 <ul>
                     {menus}
                 </ul>
@@ -23,4 +23,4 @@ class MenuBar extends Component {
     }
 }
 
-export default MenuBar;
+export default MenuTopBar;

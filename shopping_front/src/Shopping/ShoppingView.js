@@ -9,21 +9,21 @@ class ShoppingView extends Component {
     }
 
     render() {
+        if (! this.props.stores.EventStore.events) return <div/>;
         return (
-            <div className='main-visual'>
-                <div>Main Visual 및 이벤트 공지 뉴스</div>
-                <div className='main-event'>
-                    {this.props.stores.EventStore.events.map(event => (
-                        <div key={event.id}>
-                            {event.name}
-                            <div className='event-product'>
-                                <div>상품 이름:</div>
-                                <div>상품 내용:</div>
-                                <div>가격:</div>
-                            </div>
+            <div>
+                <div className='main-visual'>Main Visual 및 이벤트 공지 뉴스</div>
+                {this.props.stores.EventStore.events.map(event => (
+                    <div key={event.id} className='event-product'>
+                        <div>{event.name}</div>
+                        <div className='event-product-info'>
+                            <img src={`http://localhost:8080/api/image/${event.attachId}`} alt='사진' />
+                            <div>상품 이름: {event.productName}</div>
+                            <div>상품 내용: {event.details}</div>
+                            <div>가격: {event.cost}</div>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
         );
     }

@@ -1,0 +1,59 @@
+.product-view {
+  margin: 10vh 20vw;
+  > img {
+    float: left;
+  }
+}
+
+.product-name {
+  margin-bottom: 30px;
+  font-size: larger;
+  color: #66ddff;
+}
+
+.product-info {
+  margin-top: 12vh;
+  > div {
+    margin: 10px 0;
+  }
+}
+
+.product-title {
+  padding-top: 30px;
+  padding-bottom: 15px;
+  border-top: 5px solid #66ddff;
+  color: black;
+}
+
+.product-view-details {
+  padding: 20px;
+  text-align: center;
+  clear: both;
+  > div {
+    margin-top: 5vh;
+    color: #555;
+    > div {
+      > input {
+        width: 30vw;
+      }
+      > button {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.product-review {
+  > div {
+    margin: 30px;
+    display: flex;
+    > div {
+      display: table-cell;
+      width: 100px;
+      text-align: center;
+      &:nth-child(2) {
+        width: 90%;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.cart {
+  text-align: center;
+  > div {
+    margin: 30px;
+    display: flex;
+    text-align: center;
+    > div {
+      display: table-cell;
+      width: 100px;
+      text-align: center;
+      &:first-child {
+        width: 90%;
+      }
+      > button {
+        border: none;
+        outline: none;
+        color: #fff;
+        background-color: #ef5350;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.cart-empty {
+  text-align: center;
+  font-size: larger;
+  margin-top: 10vh;
+  height: 85vh;
+  line-height: 70vh;
+}

@@ -1,4 +1,4 @@
-.category-bar {
+.menu-top-bar {
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -21,11 +21,23 @@
   }
 }
 
+.menu-side-bar {
+  list-style-type: none;
+  height: 80vh;
+  > li {
+    float: left;
+    width: 5vw;
+  }
+  &:first-child {
+    margin-top: 10vh;
+  }
+}
+
 .menu-view {
-  width: 33vw;
+  width: 35vw;
   display: flex;
   text-align: center;
   > div {
-    margin: 75px;
+    margin: 100px;
   }
 }

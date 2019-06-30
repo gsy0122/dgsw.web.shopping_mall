@@ -1,25 +1,30 @@
 .main-visual {
-  text-align: center;
   height: 20vh;
   line-height: 20vh;
   background-color: aqua;
-  > div {
-    font-size: larger;
-  }
 }
-
-.main-event {
-  height: 10vh;
-  line-height: 10vh;
+div{
+  text-align: center;
 }
 
 .event-product {
+  width: 33vw;
+  height: 60vh;
+  float: left;
+  > div {
+    margin: 50px;
+  }
+}
+
+.event-product-info {
   margin: 0 35vw;
+  height: 50vh;
   border: 1px solid black;
-  height: 15vh;
-  line-height: 5vh;
-  width: 30vw;
   > div {
     font-size: medium;
   }
+}
+
+img{
+  width: 20vw;
 }

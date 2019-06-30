@@ -14,9 +14,9 @@ public class SubMenuController {
     @Autowired
     SubMenuService subMenuService;
 
-    @GetMapping(value = "/api/subMenu")
-    public List findAll() {
-        return subMenuService.findAll();
+    @GetMapping(value = "/api/subMenu/menuId")
+    public List findByMenuId(@Param("menuId") Long menuId) {
+        return subMenuService.findByMenuId(menuId);
     }
 
     @GetMapping(value = "/api/subMenu/id")

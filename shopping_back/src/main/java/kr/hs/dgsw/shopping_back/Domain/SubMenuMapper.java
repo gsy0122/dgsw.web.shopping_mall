@@ -6,6 +6,6 @@ import java.util.List;
 
 @Mapper
 public interface SubMenuMapper {
-    List<SubMenu> findAll();
+    List<SubMenu> findByMenuId(Long menuId);
     SubMenu findById(Long id);
 }

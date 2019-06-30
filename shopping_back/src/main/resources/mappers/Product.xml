@@ -42,11 +42,10 @@
         where sub_menu_id=#{subMenuId}
     </select>
 
-    <select id="findByEventId" parameterType="Long" resultType="kr.hs.dgsw.shopping_back.Domain.Product">
-        select id, name, mileage, price, cost, menu_id as menuId, sub_menu_id as subMenuId,
-         event_id as eventId, attach_id as attachId, factory, details
-        from product
-        where event_id=#{eventId}
+    <select id="findByEventId" parameterType="Long" resultType="HashMap">
+        select p.id, p.name, p.event_id as eventId, e.name as eventName, attach_id as attachId, p.details
+        from product p left join event e on p.event_id = e.id
+        where p.event_id=#{eventId}
     </select>
 
     <select id="findAll" resultType="kr.hs.dgsw.shopping_back.Domain.Product">

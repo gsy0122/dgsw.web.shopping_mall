@@ -28,6 +28,11 @@ public class CartServiceImpl implements CartService {
     }
 
     @Override
+    public int deleteByUserId(Long userId) {
+        return cartMapper.deleteByUserId(userId);
+    }
+
+    @Override
     public Cart findById(Long id) {
         return cartMapper.findById(id);
     }

@@ -9,7 +9,7 @@ public class Cart {
     private Long id;
     private String userId;
     private Long productId;
-    private int price;
+    private int cost;
     private int amount;
     private int total;
 }

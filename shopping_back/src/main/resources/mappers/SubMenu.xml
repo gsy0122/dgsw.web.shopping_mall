@@ -7,8 +7,9 @@
         from sub_menu
         where id=#{id}
     </select>
-    <select id="findAll" resultType="kr.hs.dgsw.shopping_back.Domain.SubMenu">
+    <select id="findByMenuId" resultType="kr.hs.dgsw.shopping_back.Domain.SubMenu">
         select id, menu_id as menuId, name
         from sub_menu
+        where menu_id=#{menuId}
     </select>
 </mapper>

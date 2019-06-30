@@ -7,8 +7,8 @@
         from event
         where id=#{id}
     </select>
-    <select id="findAll" resultType="kr.hs.dgsw.shopping_back.Domain.Event">
-        select id, name
-        from event
+    <select id="findAll" resultType="HashMap">
+        select e.id, e.name, p.name as productName, p.details, p.cost, p.attach_id as attachId
+        from event as e left join product p on e.id = p.event_id
     </select>
 </mapper>

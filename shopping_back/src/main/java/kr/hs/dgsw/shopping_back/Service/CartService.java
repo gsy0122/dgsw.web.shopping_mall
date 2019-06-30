@@ -9,6 +9,7 @@ public interface CartService {
     Long add(Cart cart);
     int modify(Cart cart);
     int deleteById(@Param("id") Long id);
+    int deleteByUserId(@Param("userId") Long userId);
     Cart findById(@Param("id") Long id);
     List<Cart> findByUserId(@Param("userId") Long userId);
 }

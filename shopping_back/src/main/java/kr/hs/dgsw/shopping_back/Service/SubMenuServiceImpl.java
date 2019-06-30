@@ -12,8 +12,8 @@ public class SubMenuServiceImpl implements SubMenuService {
     @Autowired
     SubMenuMapper subMenuMapper;
     @Override
-    public List<SubMenu> findAll() {
-        return subMenuMapper.findAll();
+    public List<SubMenu> findByMenuId(Long menuId) {
+        return subMenuMapper.findByMenuId(menuId);
     }
 
     @Override

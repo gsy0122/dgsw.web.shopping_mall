@@ -28,6 +28,11 @@ public class CartController {
         return cartService.deleteById(id);
     }
 
+    @DeleteMapping(value = "/api/cart/userId")
+    public int deleteByUserId(@Param("userId") Long userId) {
+        return cartService.deleteByUserId(userId);
+    }
+
     @GetMapping(value = "/api/cart/id")
     public Cart findById(@Param("id") Long id) {
         return cartService.findById(id);

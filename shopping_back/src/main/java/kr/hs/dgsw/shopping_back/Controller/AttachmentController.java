@@ -29,7 +29,6 @@ public class AttachmentController {
             String filepath = (String)map.get("filepath");
 
             File file = new File(filepath);
-            System.out.println(filepath);
             if(! file.exists()) return;
 
             String mimeType = URLConnection.guessContentTypeFromName(filepath);
@@ -41,7 +40,6 @@ public class AttachmentController {
 
             InputStream is = new BufferedInputStream(new FileInputStream(file));
             FileCopyUtils.copy(is, response.getOutputStream());
-            System.out.println(filepath);
         } catch (Exception ex) {
             final Logger logger = LoggerFactory.getLogger(this.getClass().getSimpleName());
             logger.warn(ex.getLocalizedMessage());

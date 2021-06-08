@@ -3080,10 +3080,10 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
-customize-cra@^0.2.13:
-  version "0.2.13"
-  resolved "https://registry.yarnpkg.com/customize-cra/-/customize-cra-0.2.13.tgz#d49e493ce7e9f4d8a2a1ae57e2f50f71e7815f60"
-  integrity sha512-Ot1HAM0ee7IDQBP222vJ8fDslshDGTtYFF4IGeLSd6QTL+3A7ZRy9KRbbwLsL+/zPKzQZ0Femlykn5Qjb18jMw==
+customize-cra@^0.2.12:
+  version "0.2.14"
+  resolved "https://registry.yarnpkg.com/customize-cra/-/customize-cra-0.2.14.tgz#41f9b2d96d9a318bec760c4c9b3dc9c26d5a7594"
+  integrity sha512-LtEMXNzkhnnqGPc1dP5fnPlF1ic1dj34hDbRVJIzfMQgOaGByHhx51fTR7fv7sTPEbCPrOBP777MkCo0GPV57g==
   dependencies:
     lodash.flow "^3.5.0"
 
@@ -6223,9 +6223,9 @@ meow@^3.7.0:
     trim-newlines "^1.0.0"
 
 merge-deep@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/merge-deep/-/merge-deep-3.0.2.tgz#f39fa100a4f1bd34ff29f7d2bf4508fbb8d83ad2"
-  integrity sha512-T7qC8kg4Zoti1cFd8Cr0M+qaZfOwjlPDEdZIIPPB2JZctjaPM4fX+i7HOId69tAti2fvO6X5ldfYUONDODsrkA==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/merge-deep/-/merge-deep-3.0.3.tgz#1a2b2ae926da8b2ae93a0ac15d90cd1922766003"
+  integrity sha512-qtmzAS6t6grwEkNrunqTBdn0qKwFgNWvlxUbAV8es9M7Ot1EbyApytCnvE0jALPa46ZpKDUo527kKiaWplmlFA==
   dependencies:
     arr-union "^3.1.0"
     clone-deep "^0.2.4"
